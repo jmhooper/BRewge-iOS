@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fzq-w0-CLa">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--BRewge-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="BusinessesMapTableViewController" customModule="Brewge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="BusinessesMapTableView" customModule="Brewge" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5WD-3C-N2B">
+                                <rect key="frame" x="0.0" y="64" width="600" height="330"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DFG-xO-hCV">
+                                <rect key="frame" x="0.0" y="394" width="600" height="206"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="bP1-B6-fpN"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="C2y-Ip-D0M"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lBz-la-a62">
+                                <rect key="frame" x="282" y="210" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5WD-3C-N2B" secondAttribute="trailing" constant="-16" id="2G1-ul-4pd"/>
+                            <constraint firstItem="5WD-3C-N2B" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="9ot-Sr-Bz2"/>
+                            <constraint firstItem="DFG-xO-hCV" firstAttribute="top" secondItem="5WD-3C-N2B" secondAttribute="bottom" id="E8A-dh-MjA"/>
+                            <constraint firstItem="lBz-la-a62" firstAttribute="centerY" secondItem="5WD-3C-N2B" secondAttribute="centerY" constant="-0.5" id="EVX-RH-3f3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DFG-xO-hCV" secondAttribute="bottom" id="FW7-pD-vAT"/>
+                            <constraint firstItem="lBz-la-a62" firstAttribute="centerX" secondItem="5WD-3C-N2B" secondAttribute="centerX" constant="0.5" id="P2g-Yc-4K1"/>
+                            <constraint firstItem="5WD-3C-N2B" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="1:2" id="UXw-Y4-hca"/>
+                            <constraint firstItem="DFG-xO-hCV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="X9f-Xa-hKS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DFG-xO-hCV" secondAttribute="trailing" constant="-16" id="bgd-YR-g7r"/>
+                            <constraint firstItem="DFG-xO-hCV" firstAttribute="top" secondItem="5WD-3C-N2B" secondAttribute="bottom" constant="29" id="daB-Zh-gsh"/>
+                            <constraint firstItem="5WD-3C-N2B" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.55" id="e7F-TL-W2U"/>
+                            <constraint firstItem="5WD-3C-N2B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="iC6-IH-x8N"/>
+                            <constraint firstItem="5WD-3C-N2B" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ySh-98-vdS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UXw-Y4-hca"/>
+                                <exclude reference="ySh-98-vdS"/>
+                                <exclude reference="daB-Zh-gsh"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outlet property="activityIndicatorView" destination="lBz-la-a62" id="HaQ-OS-w4O"/>
+                            <outlet property="mapView" destination="5WD-3C-N2B" id="10t-m8-MqO"/>
+                            <outlet property="tableView" destination="DFG-xO-hCV" id="NDS-hO-CuN"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="BRewge" id="TDl-3O-NgR">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="ACY-nT-uCn">
+                            <connections>
+                                <action selector="aboutButtonPressed:" destination="vXZ-lx-hvc" id="5mh-ma-Hny"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="45U-HA-W6f">
+                            <connections>
+                                <action selector="refreshButtonPressed:" destination="vXZ-lx-hvc" id="ZPN-Df-EWW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="businessesMapTableView" destination="kh9-bI-dsS" id="dRw-y7-0YI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="16"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X9p-9Z-a04">
+            <objects>
+                <navigationController id="fzq-w0-CLa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z9s-qL-Vpa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="8C4-gv-hrM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ec6-yP-ntz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191" y="16"/>
+        </scene>
+    </scenes>
+</document>

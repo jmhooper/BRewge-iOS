@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB122C711B7C2E6F0014B0BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C661B7C2E6F0014B0BE /* AppDelegate.swift */; };
+		AB122C721B7C2E6F0014B0BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB122C681B7C2E6F0014B0BE /* LaunchScreen.xib */; };
+		AB122C731B7C2E6F0014B0BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB122C6A1B7C2E6F0014B0BE /* Main.storyboard */; };
+		AB122C741B7C2E6F0014B0BE /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C6C1B7C2E6F0014B0BE /* Business.swift */; };
+		AB122C751B7C2E6F0014B0BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB122C6D1B7C2E6F0014B0BE /* Images.xcassets */; };
+		AB122C761B7C2E6F0014B0BE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB122C6E1B7C2E6F0014B0BE /* Info.plist */; };
+		AB122C771B7C2E6F0014B0BE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C6F1B7C2E6F0014B0BE /* APIClient.swift */; };
+		AB122C781B7C2E6F0014B0BE /* BusinessesMapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C701B7C2E6F0014B0BE /* BusinessesMapTableViewController.swift */; };
+		AB122C7F1B7C302D0014B0BE /* BusinessCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C7E1B7C302D0014B0BE /* BusinessCollection.swift */; };
+		AB122C811B7C31A80014B0BE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C801B7C31A80014B0BE /* LocationManager.swift */; };
+		AB122C831B7C326B0014B0BE /* BatonRouge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C821B7C326B0014B0BE /* BatonRouge.swift */; };
+		AB122C851B7C342F0014B0BE /* BusinessesMapTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C841B7C342F0014B0BE /* BusinessesMapTableView.swift */; };
+		AB122C871B7C36580014B0BE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C861B7C36580014B0BE /* AlertController.swift */; };
+		AB122C891B7C49BD0014B0BE /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C881B7C49BD0014B0BE /* AppTheme.swift */; };
+		AB6A6F4A1B7AF30B0083622E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6A6F491B7AF30B0083622E /* MapKit.framework */; };
+		FE45E8018FBD5358FFB14FDF /* Pods_BRewge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B960E3BC8101ADC32FDA7D /* Pods_BRewge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5A735559300809F51ED52562 /* Pods-BRewge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRewge.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRewge/Pods-BRewge.release.xcconfig"; sourceTree = "<group>"; };
+		62C7BAF46A63169853FBAD11 /* Pods-BRewge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRewge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRewge/Pods-BRewge.debug.xcconfig"; sourceTree = "<group>"; };
+		83B960E3BC8101ADC32FDA7D /* Pods_BRewge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRewge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB122C661B7C2E6F0014B0BE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BRewge/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		AB122C691B7C2E6F0014B0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		AB122C6B1B7C2E6F0014B0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		AB122C6C1B7C2E6F0014B0BE /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Business.swift; path = BRewge/Business.swift; sourceTree = SOURCE_ROOT; };
+		AB122C6D1B7C2E6F0014B0BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BRewge/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		AB122C6E1B7C2E6F0014B0BE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BRewge/Info.plist; sourceTree = SOURCE_ROOT; };
+		AB122C6F1B7C2E6F0014B0BE /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = BRewge/APIClient.swift; sourceTree = SOURCE_ROOT; };
+		AB122C701B7C2E6F0014B0BE /* BusinessesMapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessesMapTableViewController.swift; path = BRewge/BusinessesMapTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		AB122C7E1B7C302D0014B0BE /* BusinessCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessCollection.swift; path = BRewge/BusinessCollection.swift; sourceTree = SOURCE_ROOT; };
+		AB122C801B7C31A80014B0BE /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = BRewge/LocationManager.swift; sourceTree = SOURCE_ROOT; };
+		AB122C821B7C326B0014B0BE /* BatonRouge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BatonRouge.swift; path = BRewge/BatonRouge.swift; sourceTree = SOURCE_ROOT; };
+		AB122C841B7C342F0014B0BE /* BusinessesMapTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessesMapTableView.swift; path = BRewge/BusinessesMapTableView.swift; sourceTree = SOURCE_ROOT; };
+		AB122C861B7C36580014B0BE /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = BRewge/AlertController.swift; sourceTree = SOURCE_ROOT; };
+		AB122C881B7C49BD0014B0BE /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppTheme.swift; path = BRewge/AppTheme.swift; sourceTree = SOURCE_ROOT; };
+		AB6A6F241B7AF17D0083622E /* Brewge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB6A6F491B7AF30B0083622E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB6A6F211B7AF17D0083622E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB6A6F4A1B7AF30B0083622E /* MapKit.framework in Frameworks */,
+				FE45E8018FBD5358FFB14FDF /* Pods_BRewge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9576FD88F247E36FEB4812B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62C7BAF46A63169853FBAD11 /* Pods-BRewge.debug.xcconfig */,
+				5A735559300809F51ED52562 /* Pods-BRewge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AB122C671B7C2E6F0014B0BE /* Nibs and Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AB122C6A1B7C2E6F0014B0BE /* Main.storyboard */,
+				AB122C681B7C2E6F0014B0BE /* LaunchScreen.xib */,
+			);
+			name = "Nibs and Storyboards";
+			path = BRewge/Base.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		AB122C791B7C2EA70014B0BE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AB122C661B7C2E6F0014B0BE /* AppDelegate.swift */,
+				AB122C881B7C49BD0014B0BE /* AppTheme.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		AB122C7A1B7C2EB40014B0BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB122C6C1B7C2E6F0014B0BE /* Business.swift */,
+				AB122C7E1B7C302D0014B0BE /* BusinessCollection.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AB122C7B1B7C2EBF0014B0BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB122C841B7C342F0014B0BE /* BusinessesMapTableView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AB122C7C1B7C2EC80014B0BE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB122C861B7C36580014B0BE /* AlertController.swift */,
+				AB122C701B7C2E6F0014B0BE /* BusinessesMapTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AB122C7D1B7C2ED60014B0BE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AB122C6F1B7C2E6F0014B0BE /* APIClient.swift */,
+				AB122C801B7C31A80014B0BE /* LocationManager.swift */,
+				AB122C821B7C326B0014B0BE /* BatonRouge.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		AB6A6F1B1B7AF17C0083622E = {
+			isa = PBXGroup;
+			children = (
+				AB6A6F261B7AF17D0083622E /* BRewge */,
+				AB6A6F251B7AF17D0083622E /* Products */,
+				9576FD88F247E36FEB4812B8 /* Pods */,
+				FF6482FE8680E7B67F043DC5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AB6A6F251B7AF17D0083622E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB6A6F241B7AF17D0083622E /* Brewge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB6A6F261B7AF17D0083622E /* BRewge */ = {
+			isa = PBXGroup;
+			children = (
+				AB122C791B7C2EA70014B0BE /* Application */,
+				AB122C7A1B7C2EB40014B0BE /* Models */,
+				AB122C7C1B7C2EC80014B0BE /* Controllers */,
+				AB122C7B1B7C2EBF0014B0BE /* Views */,
+				AB122C671B7C2E6F0014B0BE /* Nibs and Storyboards */,
+				AB122C7D1B7C2ED60014B0BE /* Utilities */,
+				AB122C6D1B7C2E6F0014B0BE /* Images.xcassets */,
+				AB6A6F271B7AF17F0083622E /* Supporting Files */,
+			);
+			name = BRewge;
+			path = Brewge;
+			sourceTree = "<group>";
+		};
+		AB6A6F271B7AF17F0083622E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB122C6E1B7C2E6F0014B0BE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF6482FE8680E7B67F043DC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB6A6F491B7AF30B0083622E /* MapKit.framework */,
+				83B960E3BC8101ADC32FDA7D /* Pods_BRewge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB6A6F231B7AF17D0083622E /* BRewge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB6A6F431B7AF1840083622E /* Build configuration list for PBXNativeTarget "BRewge" */;
+			buildPhases = (
+				5B1E269CB27119FD9C0C663D /* Check Pods Manifest.lock */,
+				AB6A6F201B7AF17D0083622E /* Sources */,
+				AB6A6F211B7AF17D0083622E /* Frameworks */,
+				AB6A6F221B7AF17D0083622E /* Resources */,
+				E8D8EE9CE3E048751EBEF121 /* Copy Pods Resources */,
+				04A07A1C5DE516EDAAA4FC82 /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BRewge;
+			productName = Brewge;
+			productReference = AB6A6F241B7AF17D0083622E /* Brewge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB6A6F1C1B7AF17D0083622E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = JonathanHooper;
+				TargetAttributes = {
+					AB6A6F231B7AF17D0083622E = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = AB6A6F1F1B7AF17D0083622E /* Build configuration list for PBXProject "BRewge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB6A6F1B1B7AF17C0083622E;
+			productRefGroup = AB6A6F251B7AF17D0083622E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB6A6F231B7AF17D0083622E /* BRewge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB6A6F221B7AF17D0083622E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB122C761B7C2E6F0014B0BE /* Info.plist in Resources */,
+				AB122C751B7C2E6F0014B0BE /* Images.xcassets in Resources */,
+				AB122C721B7C2E6F0014B0BE /* LaunchScreen.xib in Resources */,
+				AB122C731B7C2E6F0014B0BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04A07A1C5DE516EDAAA4FC82 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRewge/Pods-BRewge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B1E269CB27119FD9C0C663D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E8D8EE9CE3E048751EBEF121 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRewge/Pods-BRewge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB6A6F201B7AF17D0083622E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB122C771B7C2E6F0014B0BE /* APIClient.swift in Sources */,
+				AB122C871B7C36580014B0BE /* AlertController.swift in Sources */,
+				AB122C831B7C326B0014B0BE /* BatonRouge.swift in Sources */,
+				AB122C711B7C2E6F0014B0BE /* AppDelegate.swift in Sources */,
+				AB122C811B7C31A80014B0BE /* LocationManager.swift in Sources */,
+				AB122C851B7C342F0014B0BE /* BusinessesMapTableView.swift in Sources */,
+				AB122C781B7C2E6F0014B0BE /* BusinessesMapTableViewController.swift in Sources */,
+				AB122C7F1B7C302D0014B0BE /* BusinessCollection.swift in Sources */,
+				AB122C741B7C2E6F0014B0BE /* Business.swift in Sources */,
+				AB122C891B7C49BD0014B0BE /* AppTheme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AB122C681B7C2E6F0014B0BE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB122C691B7C2E6F0014B0BE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		AB122C6A1B7C2E6F0014B0BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB122C6B1B7C2E6F0014B0BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB6A6F411B7AF1840083622E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB6A6F421B7AF1840083622E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB6A6F441B7AF1840083622E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62C7BAF46A63169853FBAD11 /* Pods-BRewge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Brewge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Brewge;
+			};
+			name = Debug;
+		};
+		AB6A6F451B7AF1840083622E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A735559300809F51ED52562 /* Pods-BRewge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				INFOPLIST_FILE = Brewge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Brewge;
+				PROVISIONING_PROFILE = "409ad705-a61d-4249-9ad0-1d6b98eecd8b";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB6A6F1F1B7AF17D0083622E /* Build configuration list for PBXProject "BRewge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB6A6F411B7AF1840083622E /* Debug */,
+				AB6A6F421B7AF1840083622E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB6A6F431B7AF1840083622E /* Build configuration list for PBXNativeTarget "BRewge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB6A6F441B7AF1840083622E /* Debug */,
+				AB6A6F451B7AF1840083622E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB6A6F1C1B7AF17D0083622E /* Project object */;
+}
