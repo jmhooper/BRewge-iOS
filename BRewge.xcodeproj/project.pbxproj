@@ -22,6 +22,7 @@
 		AB122C871B7C36580014B0BE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C861B7C36580014B0BE /* AlertController.swift */; };
 		AB122C891B7C49BD0014B0BE /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C881B7C49BD0014B0BE /* AppTheme.swift */; };
 		AB6A6F4A1B7AF30B0083622E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6A6F491B7AF30B0083622E /* MapKit.framework */; };
+		ABEF61C01C56C6CF00DADA8C /* BusinessAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEF61BF1C56C6CF00DADA8C /* BusinessAnnotationView.swift */; };
 		FE45E8018FBD5358FFB14FDF /* Pods_BRewge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B960E3BC8101ADC32FDA7D /* Pods_BRewge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		AB122C881B7C49BD0014B0BE /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppTheme.swift; path = BRewge/AppTheme.swift; sourceTree = SOURCE_ROOT; };
 		AB6A6F241B7AF17D0083622E /* Brewge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6A6F491B7AF30B0083622E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		ABEF61BF1C56C6CF00DADA8C /* BusinessAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				AB122C841B7C342F0014B0BE /* BusinessesMapTableView.swift */,
+				ABEF61BF1C56C6CF00DADA8C /* BusinessAnnotationView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				AB122C851B7C342F0014B0BE /* BusinessesMapTableView.swift in Sources */,
 				AB122C781B7C2E6F0014B0BE /* BusinessesMapTableViewController.swift in Sources */,
 				AB122C7F1B7C302D0014B0BE /* BusinessCollection.swift in Sources */,
+				ABEF61C01C56C6CF00DADA8C /* BusinessAnnotationView.swift in Sources */,
 				AB122C741B7C2E6F0014B0BE /* Business.swift in Sources */,
 				AB122C891B7C49BD0014B0BE /* AppTheme.swift in Sources */,
 			);

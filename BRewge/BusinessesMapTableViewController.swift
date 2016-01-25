@@ -33,7 +33,6 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        businessesMapTableView.styleSubviews()
         businessesMapTableView.mapView.delegate = self
         attemptToDisplayUserLocation()
     }
@@ -41,7 +40,7 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
     override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         loadBusinesses()
-        businessesMapTableView.panMapToBatonRouge()
+        businessesMapTableView.panMapToInitialLocation()
     }
     
     // MARK: Business Loading
@@ -75,6 +74,8 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
         self.businesses = businesses
         businessesMapTableView.tableView.reloadData()
         businessesMapTableView.updateMapAnnotations(self.businesses.businesses)
+        businessesMapTableView.tableView.setContentOffset(CGPointZero, animated: true)
+        businessesMapTableView.panMapToInitialLocation()
     }
     
     private func failToLoadBusinesses() {
@@ -88,15 +89,51 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
     
     // MARK: MapKit
     
-    public func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        if let business = view.annotation as? Business {
-            if let index = businesses.businesses.indexOf(business) {
-                businessesMapTableView.tableView.scrollToRowAtIndexPath(
-                    NSIndexPath(forItem: index, inSection: 0),
-                    atScrollPosition: .Top,
-                    animated: true
-                )
-            }
+    public func mapView(
+        mapView: MKMapView,
+        viewForAnnotation annotation: MKAnnotation
+    ) -> MKAnnotationView? {
+        if let business = annotation as? Business {
+            let annotationView = BusinessAnnotationView(business: business)
+            return annotationView
+        } else {
+            return nil
+        }
+    }
+    
+    public func mapView(
+        mapView: MKMapView,
+        didSelectAnnotationView view: MKAnnotationView
+    ) {
+        if let annotationView = view as? BusinessAnnotationView {
+            scrollTableViewToBusiness(annotationView.business)
+            annotationView.addGestureRecognizer(businessAnnotationTapGestureRecognizer)
+        }
+    }
+    
+    public func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
+        if let annotationView = view as? BusinessAnnotationView {
+            scrollTableViewToBusiness(annotationView.business)
+            annotationView.removeGestureRecognizer(businessAnnotationTapGestureRecognizer)
+        }
+    }
+    
+    // MARK: Annotation View Tap Gesture
+    
+    public var businessAnnotationTapGestureRecognizer: UITapGestureRecognizer {
+        if _businessAnnotationTapGestureRecognizer == nil {
+            _businessAnnotationTapGestureRecognizer = UITapGestureRecognizer(
+                target: self,
+                action: "selectedAnnotationTapped"
+            )
+        }
+        return _businessAnnotationTapGestureRecognizer!
+    }
+    private var _businessAnnotationTapGestureRecognizer: UITapGestureRecognizer?
+    
+    public func selectedAnnotationTapped() {
+        if let business = businessesMapTableView.mapView.selectedAnnotations.first as? Business {
+            showMapsAppAlertForBusiness(business)
         }
     }
     
@@ -141,8 +178,10 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: nil)
-        cell.textLabel!.text = businesses[indexPath.row].name
+        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: nil)
+        let business = businesses[indexPath.row]
+        cell.textLabel!.text = business.name
+        cell.detailTextLabel!.text = business.address
         cell.accessoryType = .DisclosureIndicator
         return cell
     }
@@ -152,6 +191,18 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
         showMapsAppAlertForBusiness(business)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+    
+    private func scrollTableViewToBusiness(business: Business) {
+        if let index = businesses.businesses.indexOf(business) {
+            businessesMapTableView.tableView.scrollToRowAtIndexPath(
+                NSIndexPath(forItem: index, inSection: 0),
+                atScrollPosition: .Top,
+                animated: true
+            )
+        }
+    }
+    
+    // MARK: Alert Controllers
     
     private func showMapsAppAlertForBusiness(business: Business) {
         presentViewController(

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fzq-w0-CLa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fzq-w0-CLa">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--BRewge-->
@@ -19,11 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSy-gE-URs">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qF2-MO-3Cd">
+                                        <rect key="frame" x="24" y="8" width="552" height="29"/>
+                                        <segments>
+                                            <segment title="Map"/>
+                                            <segment title="List"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="viewContrextSegmentedControlChangedContexts" destination="kh9-bI-dsS" eventType="valueChanged" id="Y1d-0o-cZW"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4bP-Eh-N3G"/>
+                                    <constraint firstItem="qF2-MO-3Cd" firstAttribute="centerY" secondItem="NSy-gE-URs" secondAttribute="centerY" id="TyR-Kx-jSJ"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="qF2-MO-3Cd" secondAttribute="trailing" constant="16" id="hHY-On-yDP"/>
+                                    <constraint firstItem="qF2-MO-3Cd" firstAttribute="leading" secondItem="NSy-gE-URs" secondAttribute="leadingMargin" constant="16" id="xmb-lP-Wt9"/>
+                                </constraints>
+                            </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5WD-3C-N2B">
-                                <rect key="frame" x="0.0" y="64" width="600" height="330"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DFG-xO-hCV">
-                                <rect key="frame" x="0.0" y="394" width="600" height="206"/>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DFG-xO-hCV">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="bP1-B6-fpN"/>
@@ -31,36 +53,32 @@
                                 </connections>
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lBz-la-a62">
-                                <rect key="frame" x="282" y="210" width="37" height="37"/>
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="5WD-3C-N2B" secondAttribute="trailing" constant="-16" id="2G1-ul-4pd"/>
-                            <constraint firstItem="5WD-3C-N2B" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="9ot-Sr-Bz2"/>
-                            <constraint firstItem="DFG-xO-hCV" firstAttribute="top" secondItem="5WD-3C-N2B" secondAttribute="bottom" id="E8A-dh-MjA"/>
-                            <constraint firstItem="lBz-la-a62" firstAttribute="centerY" secondItem="5WD-3C-N2B" secondAttribute="centerY" constant="-0.5" id="EVX-RH-3f3"/>
+                            <constraint firstItem="lBz-la-a62" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="1tS-DN-wj8"/>
+                            <constraint firstAttribute="trailing" secondItem="5WD-3C-N2B" secondAttribute="trailing" id="55Z-l2-c1C"/>
+                            <constraint firstItem="5WD-3C-N2B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="COR-u0-QLy"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5WD-3C-N2B" secondAttribute="bottom" id="CUu-BU-6ZF"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DFG-xO-hCV" secondAttribute="bottom" id="FW7-pD-vAT"/>
-                            <constraint firstItem="lBz-la-a62" firstAttribute="centerX" secondItem="5WD-3C-N2B" secondAttribute="centerX" constant="0.5" id="P2g-Yc-4K1"/>
-                            <constraint firstItem="5WD-3C-N2B" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="1:2" id="UXw-Y4-hca"/>
-                            <constraint firstItem="DFG-xO-hCV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="X9f-Xa-hKS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DFG-xO-hCV" secondAttribute="trailing" constant="-16" id="bgd-YR-g7r"/>
-                            <constraint firstItem="DFG-xO-hCV" firstAttribute="top" secondItem="5WD-3C-N2B" secondAttribute="bottom" constant="29" id="daB-Zh-gsh"/>
-                            <constraint firstItem="5WD-3C-N2B" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.55" id="e7F-TL-W2U"/>
-                            <constraint firstItem="5WD-3C-N2B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="iC6-IH-x8N"/>
-                            <constraint firstItem="5WD-3C-N2B" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ySh-98-vdS"/>
+                            <constraint firstItem="NSy-gE-URs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PoP-Fz-jCM"/>
+                            <constraint firstItem="5WD-3C-N2B" firstAttribute="top" secondItem="NSy-gE-URs" secondAttribute="bottom" id="VPs-rf-2hQ"/>
+                            <constraint firstItem="NSy-gE-URs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="XDo-jp-gm7"/>
+                            <constraint firstItem="DFG-xO-hCV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ard-2a-Qrt"/>
+                            <constraint firstItem="lBz-la-a62" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="e7B-8t-W0Y"/>
+                            <constraint firstAttribute="trailing" secondItem="DFG-xO-hCV" secondAttribute="trailing" id="fhE-sr-wFa"/>
+                            <constraint firstAttribute="trailing" secondItem="NSy-gE-URs" secondAttribute="trailing" id="hqC-eG-Yi7"/>
+                            <constraint firstItem="DFG-xO-hCV" firstAttribute="top" secondItem="NSy-gE-URs" secondAttribute="bottom" id="rQb-xp-ghz"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="UXw-Y4-hca"/>
-                                <exclude reference="ySh-98-vdS"/>
-                                <exclude reference="daB-Zh-gsh"/>
-                            </mask>
-                        </variation>
                         <connections>
                             <outlet property="activityIndicatorView" destination="lBz-la-a62" id="HaQ-OS-w4O"/>
                             <outlet property="mapView" destination="5WD-3C-N2B" id="10t-m8-MqO"/>
                             <outlet property="tableView" destination="DFG-xO-hCV" id="NDS-hO-CuN"/>
+                            <outlet property="viewContextSegmentedControl" destination="qF2-MO-3Cd" id="ibS-nS-6ch"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="BRewge" id="TDl-3O-NgR">
