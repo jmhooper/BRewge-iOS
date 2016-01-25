@@ -17,21 +17,21 @@ class APIClient: AFHTTPRequestOperationManager {
         }
     }
     
-    func loadBusinessData(#success: (businesses: BusinessCollection) -> Void, failure: (error: NSError!) -> Void) {
+    func loadBusinessData(success success: (businesses: BusinessCollection) -> Void, failure: (error: NSError!) -> Void) {
         // Use AFNetworking to load the data from the API
         self.GET(APIEndPoint, parameters:nil, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
             // Load the data from the response. Go to the failure block if it can't be loaded
-            var businessDataArray: Array<(Dictionary<String, AnyObject>)>! = response as? Array<(Dictionary<String, AnyObject>)>
+            let businessDataArray: Array<(Dictionary<String, AnyObject>)>! = response as? Array<(Dictionary<String, AnyObject>)>
             if businessDataArray == nil {
                 failure(error: NSError(domain: "API Client", code: 5624, userInfo: [NSLocalizedDescriptionKey: "Unable to load response from Open Data"]))
                 return
             }
             
             // Load the bathrooms from the response data
-            var businesses = BusinessCollection()
+            let businesses = BusinessCollection()
             for businessData in businessDataArray {
                 if let business = self.createBusinessithData(businessData) {
-                    businesses.append(self.createBusinessithData(businessData)!)
+                    businesses.append(business)
                 }
             }
             
@@ -49,7 +49,7 @@ class APIClient: AFHTTPRequestOperationManager {
         let name: String? = data["name"] as? String
         let latitude: Double? = data["latitude"] as? Double
         let longitude: Double? = data["longitude"] as? Double
-        var address: String? = data["address"] as? String
+        let address: String? = data["address"] as? String
         
         // Create the CLLocation
         var location: CLLocation?

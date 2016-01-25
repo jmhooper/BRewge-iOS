@@ -88,9 +88,9 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
     
     // MARK: MapKit
     
-    public func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
+    public func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         if let business = view.annotation as? Business {
-            if let index = find(businesses.businesses, business) {
+            if let index = businesses.businesses.indexOf(business) {
                 businessesMapTableView.tableView.scrollToRowAtIndexPath(
                     NSIndexPath(forItem: index, inSection: 0),
                     atScrollPosition: .Top,
@@ -110,7 +110,7 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
         }
     }
     
-    public func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    public func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .AuthorizedWhenInUse || status == .AuthorizedAlways {
             businessesMapTableView.mapView.showsUserLocation = true
         }

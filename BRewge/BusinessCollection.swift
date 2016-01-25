@@ -23,7 +23,7 @@ public class BusinessCollection: NSObject {
     private let timeFactor = 100
     
     public func sortForLocation(location: CLLocation) {
-        businesses.sort({ (businessA: Business, businessB: Business) -> Bool in
+        businesses.sortInPlace({ (businessA: Business, businessB: Business) -> Bool in
             let distanceA = businessA.location.distanceFromLocation(location)
             let distanceB = businessB.location.distanceFromLocation(location)
             return distanceA < distanceB
@@ -31,7 +31,7 @@ public class BusinessCollection: NSObject {
     }
     
     public func sortByName() {
-        businesses.sort({ (businessA: Business, businessB: Business) -> Bool in
+        businesses.sortInPlace({ (businessA: Business, businessB: Business) -> Bool in
             return businessA.name < businessB.name
         })
     }

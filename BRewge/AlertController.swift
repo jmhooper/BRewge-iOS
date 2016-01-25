@@ -31,7 +31,7 @@ public class AlertController: UIAlertController {
         controller.addAction(UIAlertAction(
             title: "Yes",
             style: .Default,
-            handler: { (action: UIAlertAction!) -> Void in
+            handler: { (action: UIAlertAction) -> Void in
                 business.openInAppleMaps()
             }
         ))

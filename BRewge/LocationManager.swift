@@ -22,9 +22,9 @@ class LocationManager : CLLocationManager, CLLocationManagerDelegate {
         return sharedLocationManager
     }
     
-    func requestLocation(#success: (location: CLLocation) -> Void, failure: (error: NSError) -> Void) {
+    func requestLocation(success success: (location: CLLocation) -> Void, failure: (error: NSError) -> Void) {
         // Create and store a Location Request
-        var locationRequest = LocationRequest()
+        let locationRequest = LocationRequest()
         locationRequest.success = success
         locationRequest.failure = failure
         self.locationRequests.append(locationRequest)
@@ -49,7 +49,7 @@ class LocationManager : CLLocationManager, CLLocationManagerDelegate {
     
     // LocationManagerDelegate
     
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         // Stop updates to process the requests
         self.stopUpdatingLocation()
         
@@ -68,7 +68,7 @@ class LocationManager : CLLocationManager, CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: Array<AnyObject>) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: Array<CLLocation>) {
         // Stop updates to process the requests
         self.stopUpdatingLocation()
         
@@ -76,7 +76,7 @@ class LocationManager : CLLocationManager, CLLocationManagerDelegate {
         let copiedRequests = self.locationRequests
         for locationRequest: LocationRequest in copiedRequests {
             // Forward the error
-            locationRequest.success(location: self.location)
+            locationRequest.success(location: locations.last!)
             // Remove the request
             self.removeLocationRequest(locationRequest)
         }
@@ -87,7 +87,7 @@ class LocationManager : CLLocationManager, CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == CLAuthorizationStatus.AuthorizedWhenInUse {
             self.startUpdatingLocation()
         } else {
@@ -104,7 +104,7 @@ class LocationManager : CLLocationManager, CLLocationManagerDelegate {
     
     private func removeLocationRequest(locationRequest: LocationRequest) {
         // Remove the element from the location request array
-        if let index = find(self.locationRequests, locationRequest) {
+        if let index = self.locationRequests.indexOf(locationRequest) {
             self.locationRequests.removeAtIndex(index)
         }
         

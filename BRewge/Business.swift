@@ -33,11 +33,11 @@ public class Business: NSObject, MKAnnotation {
         return location.coordinate
     }
     
-    public var title: String {
+    public var title: String? {
         return name
     }
     
-    public var subtitle: String {
+    public var subtitle: String? {
         return address
     }
     

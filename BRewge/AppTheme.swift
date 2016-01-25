@@ -7,7 +7,7 @@ public struct AppTheme {
     }
     
     private static func setNavigationBarTheme() {
-        var appearance = UINavigationBar.appearance()
+        let appearance = UINavigationBar.appearance()
         appearance.barTintColor = UIColor.blackColor()
         appearance.translucent = false
         appearance.tintColor = UIColor.whiteColor()
