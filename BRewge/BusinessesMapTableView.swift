@@ -7,7 +7,6 @@ public class BusinessesMapTableView: UIView {
     
     @IBOutlet public var mapView: MKMapView!
     @IBOutlet public var tableView: UITableView!
-    @IBOutlet public var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet public var viewContextSegmentedControl: UISegmentedControl!
     
     // MARK: View Lifecycle

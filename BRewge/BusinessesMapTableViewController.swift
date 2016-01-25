@@ -46,7 +46,6 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
     // MARK: Business Loading
     
     private func loadBusinesses() {
-        businessesMapTableView.activityIndicatorView.startAnimating()
         APIClient.sharedClient().loadBusinessData(
             success: { (businesses: BusinessCollection) -> Void in
                 self.sortBusinesses(businesses)
@@ -70,7 +69,6 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
     }
     
     private func successfullyLoadBusinesses(businesses: BusinessCollection) {
-        businessesMapTableView.activityIndicatorView.stopAnimating()
         self.businesses = businesses
         businessesMapTableView.tableView.reloadData()
         businessesMapTableView.updateMapAnnotations(self.businesses.businesses)
@@ -79,12 +77,13 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
     }
     
     private func failToLoadBusinesses() {
-        businessesMapTableView.activityIndicatorView.stopAnimating()
         presentViewController(
             AlertController.errorFetchingDataController(),
             animated: true,
             completion: nil
         )
+        businessesMapTableView.tableView.setContentOffset(CGPointZero, animated: true)
+        businessesMapTableView.panMapToInitialLocation()
     }
     
     // MARK: MapKit

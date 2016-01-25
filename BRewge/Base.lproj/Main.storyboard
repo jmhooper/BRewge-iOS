@@ -52,15 +52,9 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="C2y-Ip-D0M"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lBz-la-a62">
-                                <rect key="frame" x="282" y="281" width="37" height="37"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lBz-la-a62" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="1tS-DN-wj8"/>
                             <constraint firstAttribute="trailing" secondItem="5WD-3C-N2B" secondAttribute="trailing" id="55Z-l2-c1C"/>
                             <constraint firstItem="5WD-3C-N2B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="COR-u0-QLy"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5WD-3C-N2B" secondAttribute="bottom" id="CUu-BU-6ZF"/>
@@ -69,13 +63,11 @@
                             <constraint firstItem="5WD-3C-N2B" firstAttribute="top" secondItem="NSy-gE-URs" secondAttribute="bottom" id="VPs-rf-2hQ"/>
                             <constraint firstItem="NSy-gE-URs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="XDo-jp-gm7"/>
                             <constraint firstItem="DFG-xO-hCV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ard-2a-Qrt"/>
-                            <constraint firstItem="lBz-la-a62" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="e7B-8t-W0Y"/>
                             <constraint firstAttribute="trailing" secondItem="DFG-xO-hCV" secondAttribute="trailing" id="fhE-sr-wFa"/>
                             <constraint firstAttribute="trailing" secondItem="NSy-gE-URs" secondAttribute="trailing" id="hqC-eG-Yi7"/>
                             <constraint firstItem="DFG-xO-hCV" firstAttribute="top" secondItem="NSy-gE-URs" secondAttribute="bottom" id="rQb-xp-ghz"/>
                         </constraints>
                         <connections>
-                            <outlet property="activityIndicatorView" destination="lBz-la-a62" id="HaQ-OS-w4O"/>
                             <outlet property="mapView" destination="5WD-3C-N2B" id="10t-m8-MqO"/>
                             <outlet property="tableView" destination="DFG-xO-hCV" id="NDS-hO-CuN"/>
                             <outlet property="viewContextSegmentedControl" destination="qF2-MO-3Cd" id="ibS-nS-6ch"/>
