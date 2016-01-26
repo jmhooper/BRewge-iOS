@@ -428,6 +428,7 @@
 			baseConfigurationReference = 62C7BAF46A63169853FBAD11 /* Pods-BRewge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Brewge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -441,13 +442,14 @@
 			baseConfigurationReference = 5A735559300809F51ED52562 /* Pods-BRewge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Brewge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Brewge;
-				PROVISIONING_PROFILE = "409ad705-a61d-4249-9ad0-1d6b98eecd8b";
+				PROVISIONING_PROFILE = "886acd5e-5421-49c5-8201-650a4fc60325";
 			};
 			name = Release;
 		};
