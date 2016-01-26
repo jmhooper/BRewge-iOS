@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import GoogleMobileAds
 
 public class BusinessesMapTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, MKMapViewDelegate {
     
@@ -35,6 +36,7 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
         super.viewDidLoad()
         businessesMapTableView.mapView.delegate = self
         attemptToDisplayUserLocation()
+        initializeGoogleAdBanner()
     }
     
     override public func viewWillAppear(animated: Bool) {
@@ -150,6 +152,14 @@ public class BusinessesMapTableViewController: UIViewController, UITableViewDele
         if status == .AuthorizedWhenInUse || status == .AuthorizedAlways {
             businessesMapTableView.mapView.showsUserLocation = true
         }
+    }
+    
+    // MARK: AdMob Setup
+    
+    public func initializeGoogleAdBanner() {
+        businessesMapTableView.googleMobileAdView.adUnitID = AD_MOB_BOTTOM_BANNER_AD_UNIT_ID
+        businessesMapTableView.googleMobileAdView.rootViewController = self
+        businessesMapTableView.googleMobileAdView.loadRequest(GADRequest())
     }
     
     // MARK: Actions

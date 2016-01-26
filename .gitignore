@@ -35,3 +35,6 @@ Pods/
 # Carthage/Checkouts
 
 Carthage/Build
+
+# Ignore App Secrets
+Brewge/Secrets.swift

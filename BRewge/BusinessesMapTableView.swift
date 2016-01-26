@@ -1,5 +1,6 @@
 import UIKit
 import MapKit
+import GoogleMobileAds
 
 public class BusinessesMapTableView: UIView {
     
@@ -8,6 +9,7 @@ public class BusinessesMapTableView: UIView {
     @IBOutlet public var mapView: MKMapView!
     @IBOutlet public var tableView: UITableView!
     @IBOutlet public var viewContextSegmentedControl: UISegmentedControl!
+    @IBOutlet public var googleMobileAdView: GADBannerView!
     
     // MARK: View Lifecycle
     

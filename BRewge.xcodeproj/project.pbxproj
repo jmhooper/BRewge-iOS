@@ -22,8 +22,9 @@
 		AB122C871B7C36580014B0BE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C861B7C36580014B0BE /* AlertController.swift */; };
 		AB122C891B7C49BD0014B0BE /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB122C881B7C49BD0014B0BE /* AppTheme.swift */; };
 		AB6A6F4A1B7AF30B0083622E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6A6F491B7AF30B0083622E /* MapKit.framework */; };
+		AB7B6A111C56EE7500C2308E /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7B6A101C56EE7500C2308E /* Secrets.swift */; };
 		ABEF61C01C56C6CF00DADA8C /* BusinessAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEF61BF1C56C6CF00DADA8C /* BusinessAnnotationView.swift */; };
-		FE45E8018FBD5358FFB14FDF /* Pods_BRewge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B960E3BC8101ADC32FDA7D /* Pods_BRewge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FE45E8018FBD5358FFB14FDF /* Pods_BRewge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B960E3BC8101ADC32FDA7D /* Pods_BRewge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		AB122C881B7C49BD0014B0BE /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppTheme.swift; path = BRewge/AppTheme.swift; sourceTree = SOURCE_ROOT; };
 		AB6A6F241B7AF17D0083622E /* Brewge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6A6F491B7AF30B0083622E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AB7B6A101C56EE7500C2308E /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		ABEF61BF1C56C6CF00DADA8C /* BusinessAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				AB122C6E1B7C2E6F0014B0BE /* Info.plist */,
+				AB7B6A101C56EE7500C2308E /* Secrets.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB122C771B7C2E6F0014B0BE /* APIClient.swift in Sources */,
+				AB7B6A111C56EE7500C2308E /* Secrets.swift in Sources */,
 				AB122C871B7C36580014B0BE /* AlertController.swift in Sources */,
 				AB122C831B7C326B0014B0BE /* BatonRouge.swift in Sources */,
 				AB122C711B7C2E6F0014B0BE /* AppDelegate.swift in Sources */,
@@ -424,6 +428,7 @@
 			baseConfigurationReference = 62C7BAF46A63169853FBAD11 /* Pods-BRewge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Brewge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -437,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Brewge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

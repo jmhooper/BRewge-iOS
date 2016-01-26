@@ -42,32 +42,55 @@
                                 </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5WD-3C-N2B">
-                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="442"/>
                             </mapView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DFG-xO-hCV">
-                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="442"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="bP1-B6-fpN"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="C2y-Ip-D0M"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJk-o7-gVx">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9S-Ob-0Ai" customClass="GADBannerView">
+                                        <rect key="frame" x="140" y="0.0" width="320" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="6mk-9b-Fnb"/>
+                                            <constraint firstAttribute="height" constant="50" id="TCb-LW-IJl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Q9S-Ob-0Ai" firstAttribute="centerX" secondItem="eJk-o7-gVx" secondAttribute="centerX" id="V4q-sj-cTe"/>
+                                    <constraint firstAttribute="height" constant="50" id="u7s-W6-Jrx"/>
+                                    <constraint firstAttribute="bottom" secondItem="Q9S-Ob-0Ai" secondAttribute="bottom" id="yHG-q8-pAR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5WD-3C-N2B" secondAttribute="trailing" id="55Z-l2-c1C"/>
                             <constraint firstItem="5WD-3C-N2B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="COR-u0-QLy"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5WD-3C-N2B" secondAttribute="bottom" id="CUu-BU-6ZF"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DFG-xO-hCV" secondAttribute="bottom" id="FW7-pD-vAT"/>
+                            <constraint firstItem="eJk-o7-gVx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Kv2-Ji-fyo"/>
                             <constraint firstItem="NSy-gE-URs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PoP-Fz-jCM"/>
+                            <constraint firstItem="eJk-o7-gVx" firstAttribute="top" secondItem="DFG-xO-hCV" secondAttribute="bottom" id="QGO-OQ-kU9"/>
+                            <constraint firstItem="eJk-o7-gVx" firstAttribute="top" secondItem="5WD-3C-N2B" secondAttribute="bottom" id="ULD-ra-EHu"/>
                             <constraint firstItem="5WD-3C-N2B" firstAttribute="top" secondItem="NSy-gE-URs" secondAttribute="bottom" id="VPs-rf-2hQ"/>
+                            <constraint firstAttribute="trailing" secondItem="eJk-o7-gVx" secondAttribute="trailing" id="VmJ-SQ-74w"/>
                             <constraint firstItem="NSy-gE-URs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="XDo-jp-gm7"/>
                             <constraint firstItem="DFG-xO-hCV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ard-2a-Qrt"/>
                             <constraint firstAttribute="trailing" secondItem="DFG-xO-hCV" secondAttribute="trailing" id="fhE-sr-wFa"/>
                             <constraint firstAttribute="trailing" secondItem="NSy-gE-URs" secondAttribute="trailing" id="hqC-eG-Yi7"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eJk-o7-gVx" secondAttribute="bottom" id="qOa-H5-USe"/>
                             <constraint firstItem="DFG-xO-hCV" firstAttribute="top" secondItem="NSy-gE-URs" secondAttribute="bottom" id="rQb-xp-ghz"/>
                         </constraints>
                         <connections>
+                            <outlet property="googleMobileAdView" destination="Q9S-Ob-0Ai" id="8CP-AW-n8t"/>
                             <outlet property="mapView" destination="5WD-3C-N2B" id="10t-m8-MqO"/>
                             <outlet property="tableView" destination="DFG-xO-hCV" id="NDS-hO-CuN"/>
                             <outlet property="viewContextSegmentedControl" destination="qF2-MO-3Cd" id="ibS-nS-6ch"/>
